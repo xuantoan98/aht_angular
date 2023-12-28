@@ -16,7 +16,7 @@ import {
 
 // B1
 const result = sumArrayNumbers([1, 2, 3, 4]);
-console.log({ result });
+console.log(`Tổng của mảng là: `, result);
 
 // B2
 const person: IPerson = {
@@ -24,13 +24,14 @@ const person: IPerson = {
   age: 22,
   email: "devtest@gmail.com",
 };
-console.log(displayInfor(person));
+console.log(`Thông tin của người dùng là: `, displayInfor(person));
 
 // B3
-console.log(displayValue());
+const numbers: number[] = [12, 3, 45, 6];
+console.log(`Phẩn tử đầu tiên của mảng là: `, displayValue(numbers));
 
 // B4
-console.log(displayColor(Color.BLUE));
+console.log(`Color: `, displayColor(Color.BLUE));
 
 // B5 - B6
 const firstRectangle = new Rectangle(5, 20);
@@ -54,14 +55,19 @@ console.log(`Giai thừa của ${number} là: ${factorial}`);
 console.log(`${number} ${isPrime ? "là" : "không là"} số nguyên tố `);
 
 // B9
-const discountNumber = 10 // 10%
+const discountNumber = 10; // 10%
 console.log(
   `Tổng giá trị các sản phẩm trong danh sách là: ${sumPrice(productsList)}`
 );
-console.log('Các sản phẩm có giá lớn hơn 100: ', productWithPrice(productsList));
-console.log('Template literials: ', renderDescriptionProduct(productsList));
-console.log(`Tổng số sản phẩm có giá nhỏ hơn 100 là: ${ productsUnder100(productsList)}`);
-console.log(`Các sản phẩm đã dùng mã giảm giá:`, getDiscountedProducts(productsList, discountNumber));
-
-
-console.log("hello");
+console.log(
+  "Các sản phẩm có giá lớn hơn 100: ",
+  productWithPrice(productsList)
+);
+console.log("Template literials: ", renderDescriptionProduct(productsList));
+console.log(
+  `Tổng số sản phẩm có giá nhỏ hơn 100 là: ${productsUnder100(productsList)}`
+);
+console.log(
+  `Các sản phẩm đã dùng mã giảm giá:`,
+  getDiscountedProducts(productsList, discountNumber)
+);
